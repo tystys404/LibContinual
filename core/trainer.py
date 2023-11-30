@@ -25,6 +25,7 @@ class Trainer(object):
         self.rank = rank
         self.config = config
         self.config['rank'] = rank
+        print(config)
         self.distribute = self.config['n_gpu'] > 1  # 暂时不考虑分布式训练
         # (
         #     self.result_path, 
